@@ -1,0 +1,60 @@
+name: SXS Development Journal
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'diary/import/**'
+      - 'diary/posts.json'
+      - 'diary/sync.py'
+      - '.github/workflows/sxs-journal.yml'
+      - 'index.html'
+  discussion:
+    types: [created, edited, deleted, category_changed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  discussions: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: sxs-journal-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out SXS website
+        uses: actions/checkout@v4
+
+      - name: Import historical posts and synchronize Discussions feed
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python3 diary/sync.py
+
+      - name: Assemble static GitHub Pages
+        run: |
+          mkdir -p "$RUNNER_TEMP/sxs-site/diary"
+          cp index.html "$RUNNER_TEMP/sxs-site/index.html"
+          cp -R assets "$RUNNER_TEMP/sxs-site/assets"
+          cp diary/feed.json "$RUNNER_TEMP/sxs-site/diary/feed.json"
+          touch "$RUNNER_TEMP/sxs-site/.nojekyll"
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/sxs-site
+
+      - name: Publish SXS Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
