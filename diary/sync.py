@@ -136,10 +136,14 @@ def run():
             "discussion_number": post["number"],
         })
     feed.sort(key=lambda p: (p["date"], p["discussion_number"]), reverse=True)
+    destination = ROOT / "feed.json"
+    prior = json.loads(destination.read_text(encoding="utf-8")) if destination.exists() else {}
+    if prior.get("posts") == feed:
+        print("Feed unchanged:", len(feed), "posts", flush=True)
+        return
     output = {"generated_at": datetime.now(timezone.utc).isoformat(), "posts": feed}
-    (ROOT / "feed.json").write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n",
-                                     encoding="utf-8")
-    print("Feed built:", len(feed), "posts", flush=True)
+    destination.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    print("Feed updated:", len(feed), "posts", flush=True)
 
 if __name__ == "__main__":
     try:
