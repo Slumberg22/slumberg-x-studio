@@ -1,5 +1,5 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-11-12T14:12:13.608756+00:00",
   "posts": [
     {
       "id": "sxs-003",
@@ -8,9 +8,9 @@
       "title_en": "NAM and IR Collections",
       "excerpt_ru": "Коллекции 2041 NAM-модели и 4387 IR-импульсов, каталоги источников и идея быстрой смены звука без перезаписи пресета.",
       "excerpt_en": "Collections of 2,041 NAM models and 4,387 IR files, source catalogs, and a workflow for quick tone changes without rewriting presets.",
-      "url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/",
+      "url": "https://github.com/Slumberg22/slumberg-x-studio/discussions/4",
       "source_url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/",
-      "discussion_number": null
+      "discussion_number": 4
     },
     {
       "id": "sxs-002",
@@ -19,9 +19,9 @@
       "title_en": "NUX QuickTone: One Version for Four Processors",
       "excerpt_ru": "Проверка QuickTone 2.6.10.9 на четырёх процессорах NUX и история первых автоматически собранных пресетов по песням Beatles.",
       "excerpt_en": "QuickTone 2.6.10.9 tested with four NUX processors and the story behind the first automatically generated Beatles presets.",
-      "url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/",
+      "url": "https://github.com/Slumberg22/slumberg-x-studio/discussions/3",
       "source_url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/",
-      "discussion_number": null
+      "discussion_number": 3
     },
     {
       "id": "sxs-001",
@@ -30,9 +30,9 @@
       "title_en": "From One Preset to Slumberg X Studio",
       "excerpt_ru": "Как идея автоматической сборки гитарных пресетов привела к созданию Slumberg X Studio, собственной энциклопедии звука и первых восьми пресетов.",
       "excerpt_en": "How an idea for AI-assisted guitar preset creation grew into Slumberg X Studio, a tone encyclopedia and eight experimental presets.",
-      "url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/",
+      "url": "https://github.com/Slumberg22/slumberg-x-studio/discussions/2",
       "source_url": "https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/",
-      "discussion_number": null
+      "discussion_number": 2
     }
   ]
 }
