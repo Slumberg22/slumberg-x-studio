@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#10161f">
+  <meta name="description" content="Slumberg X Studio — independent guitar-tone engineering hobby project: NUX presets, QuickTone, IR/NAM and sound research.">
+  <title>Slumberg X Studio — Guitar Tone Engineering</title>
+  <style>
+    :root{font-family:"Segoe UI",Arial,sans-serif;color:#eaf0f6;background:#10161f}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse 88% 50% at 92% 1%,#1e3450 0,transparent 64%),#10161f;min-height:100vh}
+    a{color:#9dd7fc;text-decoration:none}a:hover{text-decoration:underline}
+    a:focus-visible,button:focus-visible{outline:2px solid #8ccfff;outline-offset:4px}
+    .page{max-width:1040px;margin:0 auto;padding:28px 24px 70px}
+    .top{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid #303e4d;padding-bottom:21px}
+    .identity{display:flex;align-items:center;gap:12px}
+    .mark{font-weight:850;letter-spacing:.08em;border:1px solid #4a6680;border-radius:12px;background:#192433;color:#e8f2fa;padding:10px 13px;font-size:17px}
+    .brand{font-size:17px;letter-spacing:.045em;font-weight:700}
+    .sub{display:block;font-size:11px;color:#9eb3c8;font-weight:500;letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+    .langs{display:flex;gap:6px}
+    .langs button{appearance:none;border:1px solid #425267;border-radius:6px;color:#c0d0e0;background:transparent;font:600 12px/1 "Segoe UI",Arial,sans-serif;padding:9px 12px;cursor:pointer}
+    .langs button.active{background:#314f69;border-color:#7ab1da;color:#fff}
+    .eyebrow{color:#9ed6fc;font-size:12px;letter-spacing:.19em;text-transform:uppercase;font-weight:800}
+    h1{font-size:clamp(32px,5.4vw,62px);line-height:1.11;letter-spacing:-.035em;margin:14px 0 24px;max-width:930px}
+    .lead{font-size:clamp(16px,2.1vw,20px);color:#cad8e5;line-height:1.65;max-width:760px}
+    .hero{padding:68px 0 52px}
+    .status{display:inline-flex;align-items:center;gap:9px;border:1px solid #39576c;border-radius:100px;background:#172738;padding:9px 13px;color:#badcf4;font-size:12px;font-weight:650;margin-bottom:18px}
+    .dot{height:7px;width:7px;border-radius:100%;background:#78bbdf;display:inline-block}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .button{display:inline-flex;gap:8px;justify-content:center;align-items:center;border-radius:8px;padding:12px 19px;font-weight:750;font-size:14px;border:1px solid #6b9cbf;background:#244967;color:#f4f9fc}
+    .button.secondary{background:#171f2b;border-color:#465a6e;color:#d5e5f1}
+    .button:hover{background:#315f82;text-decoration:none}
+    section{margin-top:24px}
+    h2{font-size:24px;margin:0 0 12px;color:#f2f6fa}
+    p{line-height:1.7}
+    .section-note{color:#a6bacb;max-width:790px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:20px}
+    .card{border:1px solid #304357;background:linear-gradient(155deg,#1b2837,#151d28);padding:24px;border-radius:13px}
+    .card h3{font-size:17px;margin:0 0 10px}
+    .card p{font-size:14px;color:#bbcad8;margin:0}
+    .mini{color:#89badb;text-transform:uppercase;font-size:10px;letter-spacing:.12em;font-weight:750;margin-bottom:9px}
+    .row-section{border:1px solid #314456;border-radius:14px;padding:24px;margin-top:18px;background:#161f2b}
+    .row-section h2{margin:0 0 6px}
+    .row-section p{color:#b9c9d9;margin:7px 0 14px}
+    .muted{font-size:13px;color:#98aebf}
+    footer{margin-top:46px;padding-top:24px;border-top:1px solid #314152;color:#8fa4b8;font-size:12px;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+    [hidden]{display:none!important}
+    @media(max-width:680px){.page{padding:20px 16px 42px}.hero{padding:52px 0 30px}.grid{grid-template-columns:1fr}.top{align-items:flex-start}.brand{font-size:14px}.mark{font-size:13px}.card,.row-section{padding:20px}}
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header class="top">
+      <div class="identity">
+        <span class="mark" aria-hidden="true">SXS</span>
+        <span class="brand">Slumberg X Studio <span class="sub">Guitar Tone Engineering</span></span>
+      </div>
+      <div class="langs" aria-label="Language / Язык">
+        <button type="button" id="lang-ru" class="active" aria-pressed="true">RU</button>
+        <button type="button" id="lang-en" aria-pressed="false">EN</button>
+      </div>
+    </header>
+
+    <main id="content-ru">
+      <div class="hero">
+        <span class="status"><span class="dot"></span>Личный проект · в разработке</span>
+        <div class="eyebrow">Музыка · электроника · программирование</div>
+        <h1>Гитарный звук — от замысла до понятного пресета.</h1>
+        <p class="lead">Slumberg X Studio — мой личный проект по исследованию и созданию гитарного звучания. Я разбираюсь, как устроены пресеты, усилители, кабинеты, эффекты, IR и NAM, и разрабатываю инструменты для работы с ними.</p>
+        <div class="actions">
+          <a class="button" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/">Дневник проекта ↗</a>
+          <a class="button secondary" href="https://github.com/Slumberg22/slumberg-x-studio">GitHub проекта ↗</a>
+        </div>
+      </div>
+
+      <section aria-labelledby="work-ru">
+        <h2 id="work-ru">Над чем я работаю</h2>
+        <p class="section-note">Основная практическая платформа исследований — процессоры NUX и QuickTone. Некоторые инструменты уже реализованы в рабочих сборках; другие направления ещё развиваются.</p>
+        <div class="grid">
+          <article class="card"><div class="mini">01 · Reader</div><h3>Разбор пресетов и настроек</h3><p>Изучение цепочек эффектов, Scenes, параметров и различий между состояниями QuickTone.</p></article>
+          <article class="card"><div class="mini">02 · Sound research</div><h3>Исследование звучания</h3><p>Усилители, кабинеты, микрофоны, эффекты, импульсные отклики IR и модели NAM.</p></article>
+          <article class="card"><div class="mini">03 · Future direction</div><h3>AI-assisted tone creation</h3><p>Исследование способов перехода от композиции или описания звука к подходящим настройкам процессора.</p></article>
+          <article class="card"><div class="mini">04 · Future direction</div><h3>Cross-device preset migration</h3><p>Разработка методов адаптации пресетов между разными моделями процессоров и, в перспективе, производителями.</p></article>
+        </div>
+      </section>
+      <section class="row-section" aria-labelledby="downloads-ru">
+        <h2 id="downloads-ru">Программа и обновления</h2>
+        <p>Первая публичная Windows-версия готовится. Пока здесь нет опубликованного EXE или ссылки на скачивание. Когда выпуск будет готов, он появится в разделе GitHub Releases.</p>
+        <a href="https://github.com/Slumberg22/slumberg-x-studio/releases">Смотреть выпуски ↗</a>
+      </section>
+      <section class="row-section" aria-labelledby="support-ru">
+        <h2 id="support-ru">Поддержка проекта</h2>
+        <p>Проект развивается в свободное время. SXS планируется распространять бесплатно, с возможностью добровольной поддержки. Ссылка на донаты появится после настройки страницы платежей.</p>
+      </section>
+    </main>
+
+    <main id="content-en" hidden>
+      <div class="hero">
+        <span class="status"><span class="dot"></span>Personal hobby project · in development</span>
+        <div class="eyebrow">Music · Electronics · Programming</div>
+        <h1>Guitar tone — from an idea to a reproducible preset.</h1>
+        <p class="lead">Slumberg X Studio is my personal guitar-tone engineering project. I explore how presets, amplifiers, cabinets, effects, IR and NAM work, while building practical tools to understand and work with them.</p>
+        <div class="actions">
+          <a class="button" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/">Project journal ↗</a>
+          <a class="button secondary" href="https://github.com/Slumberg22/slumberg-x-studio">Project on GitHub ↗</a>
+        </div>
+      </div>
+
+      <section aria-labelledby="work-en">
+        <h2 id="work-en">What I'm building</h2>
+        <p class="section-note">NUX processors and QuickTone are my current practical research platform. Some tools already exist in working development builds; other directions remain ongoing research.</p>
+        <div class="grid">
+          <article class="card"><div class="mini">01 · Reader</div><h3>Preset and parameter analysis</h3><p>Exploring signal chains, Scenes, parameter values and differences between QuickTone states.</p></article>
+          <article class="card"><div class="mini">02 · Sound research</div><h3>Guitar tone research</h3><p>Amplifiers, cabinets, speakers, microphones, effects, impulse responses and NAM captures.</p></article>
+          <article class="card"><div class="mini">03 · Future direction</div><h3>AI-assisted tone creation</h3><p>Research into translating a song, audio reference or tonal description into useful processor settings.</p></article>
+          <article class="card"><div class="mini">04 · Future direction</div><h3>Cross-device preset migration</h3><p>Developing methods to adapt presets across processors and eventually across manufacturers.</p></article>
+        </div>
+      </section>
+      <section class="row-section" aria-labelledby="downloads-en">
+        <h2 id="downloads-en">Software & updates</h2>
+        <p>The first public Windows edition is being prepared. There is no published EXE or download link yet. When the release is ready, it will appear under GitHub Releases.</p>
+        <a href="https://github.com/Slumberg22/slumberg-x-studio/releases">View releases ↗</a>
+      </section>
+      <section class="row-section" aria-labelledby="support-en">
+        <h2 id="support-en">Support the project</h2>
+        <p>This project is developed in my spare time. SXS is intended to remain free, with optional voluntary support. A donation link will be added when a payment page is available.</p>
+      </section>
+    </main>
+    <footer><span>© Slumberg X Studio · Independent guitar-tone engineering</span><span>Site is under preparation · Initial public release pending</span></footer>
+  </div>
+  <script>
+    const ru=document.getElementById('content-ru'),en=document.getElementById('content-en');
+    const ruButton=document.getElementById('lang-ru'),enButton=document.getElementById('lang-en');
+    function setLanguage(lang){
+      const isRu=lang==='ru';
+      ru.hidden=!isRu;en.hidden=isRu;document.documentElement.lang=isRu?'ru':'en';
+      ruButton.classList.toggle('active',isRu);enButton.classList.toggle('active',!isRu);
+      ruButton.setAttribute('aria-pressed',String(isRu));enButton.setAttribute('aria-pressed',String(!isRu));
+    }
+    ruButton.addEventListener('click',()=>setLanguage('ru'));
+    enButton.addEventListener('click',()=>setLanguage('en'));
+  </script>
+</body>
+</html>
