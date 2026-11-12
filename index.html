@@ -29,10 +29,20 @@ footer{border-top:1px solid #344557;margin:78px 0 0;padding:24px 0 42px;color:#8
 @media(max-width:1110px){.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:740px){.model-gallery .shots-grid{grid-template-columns:1fr}.model-gallery{padding:4px 0 20px}}
 @media(max-width:480px){.feature-grid{grid-template-columns:1fr}.site-actions{flex-direction:column}.site-actions .btn{width:100%}}
+/* R4: SXS development journal. Keep all existing R3 site styling intact. */
+.journal-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.journal-entry{display:flex;flex-direction:column;padding:22px 24px 24px;background:#192431;border:1px solid #37475a;border-radius:12px;min-height:240px}
+.journal-entry time{font-size:12px;color:#93aec1;letter-spacing:.035em;margin-bottom:13px}
+.journal-entry h3{font-size:19px;line-height:1.3;margin:0 0 13px}
+.journal-entry h3 a{color:#e9f3fc;text-decoration:none}.journal-entry h3 a:hover{text-decoration:underline}
+.journal-entry p{font-size:14px;line-height:1.65;color:#b9cbda;margin:0 0 16px}
+.journal-link{margin-top:auto;color:#92c8ef;font-size:14px;font-weight:700}.journal-more{margin:22px 0 0;font-size:14px;font-weight:700}
+@media(max-width:950px){.journal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:740px){.journal-grid{grid-template-columns:1fr}.journal-entry{min-height:0}}
 </style></head><body><div class="wrapper">
 <header class="site-header"><div class="identity"><img src="assets/sxs-approved-short.webp" alt="Slumberg X Studio" width="48" height="55"><div><strong>Slumberg X Studio</strong><small>Guitar Tone Engineering</small></div></div><div class="langs" aria-label="Language"><button type="button" id="lang-ru" aria-pressed="true">RU</button><button type="button" id="lang-en" aria-pressed="false">EN</button></div></header>
 <div id="site-ru" class="locale" lang="ru" >
-<nav class="main-nav" aria-label="Навигация"><a href="#features">Возможности</a><a href="#current">Текущий этап</a><a href="#screens">Скриншоты</a><a href="#support">Публикация</a></nav>
+<nav class="main-nav" aria-label="Навигация"><a href="#features">Возможности</a><a href="#current">Текущий этап</a><a href="#screens">Скриншоты</a><a href="#journal">Дневник</a><a href="#support">Публикация</a></nav>
 <main>
 <section class="hero" id="about"><div class="hero-copy">
 <span class="status"><span class="status-dot"></span>Windows · Reader</span><h1>Slumberg X Studio</h1>
@@ -42,12 +52,18 @@ footer{border-top:1px solid #344557;margin:78px 0 0;padding:24px 0 42px;color:#8
 <section id="features" class="section"><div class="section-top"><h2>Основные направления разработки</h2></div><div class="feature-grid"><article class="feature"><h3>LIVE CONTROL</h3><p>Просмотр, сравнение и точное изменение настроек процессора.</p></article><article class="feature"><h3>Preset Manager</h3><p>Управление пресетами, импорт, экспорт, сравнение и резервное копирование.</p></article><article class="feature"><h3>Scene Library &amp; Composer</h3><p>Хранение отдельных Scenes и создание из них новых пресетов.</p></article><article class="feature"><h3>Sound Lab</h3><p>Сохранение вариантов звучания, A/B/C сравнение и восстановление настроек.</p></article><article class="feature"><h3>IR / NAM Tools</h3><p>Анализ, сравнение и управление звуковыми ресурсами.</p></article><article class="feature"><h3>Scene eXchange Set (.sxs)</h3><p>Универсальный формат хранения и обмена пресетами и Scenes.</p></article><article class="feature"><h3>Cross-device Conversion</h3><p>Перенос и адаптация пресетов между процессорами разных моделей и производителей.</p></article></div></section>
 <section id="current" class="section"><div class="section-top"><h2>SXS Reader</h2></div><div class="current-notes"><p>SXS Reader для Windows работает совместно с NUX QuickTone 2.6.10.9.</p><p>Чтение текущих параметров, Scenes, Signal Chain, сравнение настроек и отображение всех изменённых параметров пресета относительно исходного состояния до начала редактирования.</p><p>Поддерживаемые процессоры: <strong>MG-400 GEN2, MG-300 MKII, MG-30, MG-101</strong>.</p><p>Поддержка <strong>MG-30 MKII</strong> предусмотрена. Аппаратная проверка — после начала продаж в феврале 2027 года.</p></div></section>
 <section id="screens" class="section screens-section"><div class="section-top"><h2>Скриншоты</h2></div><div class="model-gallery"><h3>MG-400 GEN2</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg400-cab-ir.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg400-cab-ir.webp" width="2048" height="1012" loading="lazy" alt="SXS / QuickTone · MG-400 GEN2 · CAB / IR"></a><figcaption><h3>CAB / IR</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg400-eq10.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg400-eq10.webp" width="2048" height="1001" loading="lazy" alt="SXS / QuickTone · MG-400 GEN2 · 10-band EQ"></a><figcaption><h3>10-band EQ</h3></figcaption></figure></div></div><div class="model-gallery"><h3>MG-300 MKII</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg300mk2-efx-before.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg300mk2-efx-before.webp" width="2048" height="828" loading="lazy" alt="SXS / QuickTone · MG-300 MKII · EFX · T SCREAMER"></a><figcaption><h3>EFX · T SCREAMER</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg300mk2-efx.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg300mk2-efx.webp" width="2048" height="828" loading="lazy" alt="SXS / QuickTone · MG-300 MKII · EFX · MUF DIST"></a><figcaption><h3>EFX · MUF DIST</h3></figcaption></figure></div></div><div class="model-gallery"><h3>MG-30</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg30-amp.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg30-amp.webp" width="2048" height="796" loading="lazy" alt="SXS / QuickTone · MG-30 · AMP · CALI CRUNCH"></a><figcaption><h3>AMP · CALI CRUNCH</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg30-ir.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg30-ir.webp" width="2048" height="820" loading="lazy" alt="SXS / QuickTone · MG-30 · CAB / IR · DR112"></a><figcaption><h3>CAB / IR · DR112</h3></figcaption></figure></div></div></section>
+<section id="journal" class="section journal-section"><div class="section-top"><h2>Дневник разработки</h2><p>Исходные публикации SXS с GuitarPlayer.ru. Новые записи и обсуждения — в GitHub Discussions.</p></div>
+<div id="diary-ru" class="journal-grid">
+<article class="journal-entry"><time datetime="2026-10-29">29 октября 2026 г.</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/" target="_blank" rel="noopener noreferrer">NAM и IR — коллекции</a></h3><p>Коллекции 2041 NAM-модели и 4387 IR-импульсов, каталоги источников и идея быстрой смены звука без перезаписи пресета.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/" target="_blank" rel="noopener noreferrer">Читать исходную публикацию</a></article>
+<article class="journal-entry"><time datetime="2026-10-28">28 октября 2026 г.</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/" target="_blank" rel="noopener noreferrer">NUX QuickTone — одна версия на четыре процессора</a></h3><p>Проверка QuickTone 2.6.10.9 на четырёх процессорах NUX и история первых автоматически собранных пресетов по песням Beatles.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/" target="_blank" rel="noopener noreferrer">Читать исходную публикацию</a></article>
+<article class="journal-entry"><time datetime="2026-10-28">28 октября 2026 г.</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/" target="_blank" rel="noopener noreferrer">От одного пресета до Slumberg X Studio</a></h3><p>Как идея автоматической сборки гитарных пресетов привела к созданию Slumberg X Studio, собственной энциклопедии звука и первых восьми пресетов.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/" target="_blank" rel="noopener noreferrer">Читать исходную публикацию</a></article>
+</div><p class="journal-more"><a href="https://github.com/Slumberg22/slumberg-x-studio/discussions/categories/announcements" target="_blank" rel="noopener noreferrer">Все записи и обсуждения на GitHub</a></p></section>
 <section id="support" class="section"><div class="section-top"><h2>Публикация и поддержка</h2></div>
 <div class="support-copy"><p>Текущая версия SXS полнофункциональна в части чтения данных и распространяется бесплатно.</p><p>Разработкой SXS я занимаюсь потому, что мне это интересно, и планирую продолжать. Но публикация новых версий — отдельный вопрос.</p><p>Если вам тоже интересен проект и его дальнейшее развитие, вы можете поддержать его донатом. Если такой поддержки не будет, эта версия останется первой и последней в свободном доступе.</p></div>
 <div class="site-actions"><button class="btn primary" type="button" disabled title="Ссылка будет доступна после публикации" aria-label="Скачать SXS: Ссылка будет доступна после публикации">Скачать SXS</button><button class="btn muted" type="button" disabled title="Ссылка будет доступна после создания страницы донатов" aria-label="Поддержать проект: Ссылка будет доступна после создания страницы донатов">Поддержать проект</button></div>
 </section></main>
 </div><div id="site-en" class="locale" lang="en" hidden>
-<nav class="main-nav" aria-label="Navigation"><a href="#features">Features</a><a href="#current">Current version</a><a href="#screens">Screenshots</a><a href="#support">Release</a></nav>
+<nav class="main-nav" aria-label="Navigation"><a href="#features">Features</a><a href="#current">Current version</a><a href="#screens">Screenshots</a><a href="#journal">Journal</a><a href="#support">Release</a></nav>
 <main>
 <section class="hero" id="about"><div class="hero-copy">
 <span class="status"><span class="status-dot"></span>Windows · Reader</span><h1>Slumberg X Studio</h1>
@@ -57,6 +73,12 @@ footer{border-top:1px solid #344557;margin:78px 0 0;padding:24px 0 42px;color:#8
 <section id="features" class="section"><div class="section-top"><h2>Development areas</h2></div><div class="feature-grid"><article class="feature"><h3>LIVE CONTROL</h3><p>View, compare and precisely change processor settings.</p></article><article class="feature"><h3>Preset Manager</h3><p>Manage, import, export, compare and back up presets.</p></article><article class="feature"><h3>Scene Library &amp; Composer</h3><p>Store individual Scenes and assemble new presets from them.</p></article><article class="feature"><h3>Sound Lab</h3><p>Save tone variants, compare A/B/C and recall settings.</p></article><article class="feature"><h3>IR / NAM Tools</h3><p>Analyse, compare and manage tone resources.</p></article><article class="feature"><h3>Scene eXchange Set (.sxs)</h3><p>Portable format for storing and exchanging presets and Scenes.</p></article><article class="feature"><h3>Cross-device Conversion</h3><p>Convert and adapt presets across processor models and manufacturers.</p></article></div></section>
 <section id="current" class="section"><div class="section-top"><h2>SXS Reader</h2></div><div class="current-notes"><p>SXS Reader for Windows works with NUX QuickTone 2.6.10.9.</p><p>Reads current parameters, Scenes and Signal Chain, compares settings and displays all changed preset parameters against the state before editing began.</p><p>Supported processors: <strong>MG-400 GEN2, MG-300 MKII, MG-30, MG-101</strong>.</p><p><strong>MG-30 MKII</strong> support is included. Hardware testing is pending its expected February 2027 release.</p></div></section>
 <section id="screens" class="section screens-section"><div class="section-top"><h2>Screenshots</h2></div><div class="model-gallery"><h3>MG-400 GEN2</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg400-cab-ir.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg400-cab-ir.webp" width="2048" height="1012" loading="lazy" alt="SXS / QuickTone · MG-400 GEN2 · CAB / IR"></a><figcaption><h3>CAB / IR</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg400-eq10.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg400-eq10.webp" width="2048" height="1001" loading="lazy" alt="SXS / QuickTone · MG-400 GEN2 · 10-band EQ"></a><figcaption><h3>10-band EQ</h3></figcaption></figure></div></div><div class="model-gallery"><h3>MG-300 MKII</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg300mk2-efx-before.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg300mk2-efx-before.webp" width="2048" height="828" loading="lazy" alt="SXS / QuickTone · MG-300 MKII · EFX · T SCREAMER"></a><figcaption><h3>EFX · T SCREAMER</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg300mk2-efx.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg300mk2-efx.webp" width="2048" height="828" loading="lazy" alt="SXS / QuickTone · MG-300 MKII · EFX · MUF DIST"></a><figcaption><h3>EFX · MUF DIST</h3></figcaption></figure></div></div><div class="model-gallery"><h3>MG-30</h3><div class="shots-grid"><figure class="shot"><a href="assets/sxs-windows-mg30-amp.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg30-amp.webp" width="2048" height="796" loading="lazy" alt="SXS / QuickTone · MG-30 · AMP · CALI CRUNCH"></a><figcaption><h3>AMP · CALI CRUNCH</h3></figcaption></figure><figure class="shot"><a href="assets/sxs-windows-mg30-ir.webp" target="_blank" rel="noopener"><img src="assets/sxs-windows-mg30-ir.webp" width="2048" height="820" loading="lazy" alt="SXS / QuickTone · MG-30 · CAB / IR · DR112"></a><figcaption><h3>CAB / IR · DR112</h3></figcaption></figure></div></div></section>
+<section id="journal" class="section journal-section"><div class="section-top"><h2>Development journal</h2><p>Original SXS posts from GuitarPlayer.ru. New entries and discussions live on GitHub Discussions.</p></div>
+<div id="diary-en" class="journal-grid">
+<article class="journal-entry"><time datetime="2026-10-29">29 October 2026</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/" target="_blank" rel="noopener noreferrer">NAM and IR Collections</a></h3><p>Collections of 2,041 NAM models and 4,387 IR files, source catalogs, and a workflow for quick tone changes without rewriting presets.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659374/" target="_blank" rel="noopener noreferrer">Read original post</a></article>
+<article class="journal-entry"><time datetime="2026-10-28">28 October 2026</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/" target="_blank" rel="noopener noreferrer">NUX QuickTone: One Version for Four Processors</a></h3><p>QuickTone 2.6.10.9 tested with four NUX processors and the story behind the first automatically generated Beatles presets.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12659134/" target="_blank" rel="noopener noreferrer">Read original post</a></article>
+<article class="journal-entry"><time datetime="2026-10-28">28 October 2026</time><h3><a href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/" target="_blank" rel="noopener noreferrer">From One Preset to Slumberg X Studio</a></h3><p>How an idea for AI-assisted guitar preset creation grew into Slumberg X Studio, a tone encyclopedia and eight experimental presets.</p><a class="journal-link" href="https://guitarplayer.ru/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/msg12658999/" target="_blank" rel="noopener noreferrer">Read original post</a></article>
+</div><p class="journal-more"><a href="https://github.com/Slumberg22/slumberg-x-studio/discussions/categories/announcements" target="_blank" rel="noopener noreferrer">All posts and discussions on GitHub</a></p></section>
 <section id="support" class="section"><div class="section-top"><h2>Release and support</h2></div>
 <div class="support-copy"><p>The current SXS version is fully functional for reading data and is distributed free of charge.</p><p>I develop SXS because I am interested in it, and I plan to continue. Publishing future versions is a separate decision.</p><p>If you are interested in this project and its future development, you can support it with a donation. Without such support, this will remain the first and last publicly available version.</p></div>
 <div class="site-actions"><button class="btn primary" type="button" disabled title="Link will be available after release" aria-label="Download SXS: Link will be available after release">Download SXS</button><button class="btn muted" type="button" disabled title="Link will be available once the donation page exists" aria-label="Support the project: Link will be available once the donation page exists">Support the project</button></div>
@@ -92,6 +114,48 @@ function activateGiscus(){
  document.getElementById('giscus-root').appendChild(script);
  commentsStatus.hidden=true;
 }
+
+// The journal index is published by the GitHub Discussions sync workflow.
+// The HTML cards above remain readable if JavaScript or the index is unavailable.
+function journalDate(iso,lang){
+ const date=new Date(String(iso)+'T12:00:00Z');
+ return Number.isNaN(date.getTime())?String(iso):
+ date.toLocaleDateString(lang==='ru'?'ru-RU':'en-GB',{day:'numeric',month:'long',year:'numeric',timeZone:'UTC'});
+}
+function journalUrl(url){
+ try {
+  const u=new URL(url);
+  if(u.protocol!=='https:')return null;
+  const gh=u.hostname==='github.com'&&u.pathname.startsWith('/Slumberg22/slumberg-x-studio/discussions/');
+  const forum=u.hostname==='guitarplayer.ru'&&u.pathname.startsWith('/equipment-effects-amps/nux-ot-odnogo-preseta-do-slumberg-x-studio/');
+  return gh||forum?u.href:null;
+ }catch{return null;}
+}
+function renderJournal(lang,posts){
+ const node=document.getElementById('diary-'+lang);
+ if(!node||!Array.isArray(posts)||!posts.length)return;
+ const fragment=document.createDocumentFragment();
+ for(const post of posts.slice(0,24)){
+  if(!post||typeof post!=='object')continue;
+  const href=journalUrl(post.url);if(!href)continue;
+  const article=document.createElement('article');article.className='journal-entry';
+  const stamp=document.createElement('time');stamp.dateTime=String(post.date||'');stamp.textContent=journalDate(post.date||'',lang);
+  const heading=document.createElement('h3');const title=document.createElement('a');
+  title.href=href;title.target='_blank';title.rel='noopener noreferrer';
+  title.textContent=String((lang==='ru'?post.title_ru:post.title_en)||post.title_ru||'SXS');heading.appendChild(title);
+  const description=document.createElement('p');
+  description.textContent=String((lang==='ru'?post.excerpt_ru:post.excerpt_en)||post.excerpt_ru||'');
+  const read=document.createElement('a');read.className='journal-link';read.href=href;read.target='_blank';read.rel='noopener noreferrer';
+  const fromGH=href.startsWith('https://github.com/');
+  read.textContent=lang==='ru'?(fromGH?'Читать и обсудить':'Читать исходную публикацию'):(fromGH?'Read and discuss':'Read original post');
+  article.append(stamp,heading,description,read);fragment.appendChild(article);
+ }
+ if(fragment.childNodes.length)node.replaceChildren(fragment);
+}
+fetch('diary/feed.json',{cache:'no-store'})
+ .then(response=>{if(!response.ok)throw Error('journal HTTP '+response.status);return response.json();})
+ .then(data=>{renderJournal('ru',data.posts);renderJournal('en',data.posts);})
+ .catch(()=>{}); // Keep the static published entries intact.
 activateGiscus();
 })();
 </script></body></html>
