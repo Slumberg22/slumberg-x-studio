@@ -114,6 +114,9 @@ def run():
         if post.get("category", {}).get("id") != ANNOUNCEMENTS_ID:
             continue
         key = marker_id(post.get("body"))
+        # GitHub-created onboarding announcement (#1) is not an SXS diary entry.
+        if post["number"] == 1 and not key:
+            continue
         original = by_id.get(key)
         title = post["title"]
         excerpt = summary(post.get("body", ""))
